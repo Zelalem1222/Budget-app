@@ -1,12 +1,12 @@
-<div id="<%= dom_id purchase %>">
-  <p>
-    <strong>Name:</strong>
-    <%= purchase.name %>
-  </p>
+<tr>
+  <td ><%= purchase.name %></td>
+  <td>$<%= purchase.amount %></td>
+  <td > <%= purchase.category.name %></td>
+  <td >
+      <%= button_to "Delete", category_purchase_path(purchase.category_id, purchase.id), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+  </td>
+</tr>
 
-  <p>
-    <strong>Amount:</strong>
-    <%= purchase.amount %>
-  </p>
 
-</div>
+
+ 
