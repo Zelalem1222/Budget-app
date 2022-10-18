@@ -91,6 +91,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'https://budget-controller1.herokuapp.com/' }
-  config.action_mailer.smtp_settings = get_smtp_setting.symbolize_keys
+  # Use a real queuing backend for Active Job (and separate queues per environment).
+  config.active_job.queue_adapter = :sidekiq
+  
+   
 end
