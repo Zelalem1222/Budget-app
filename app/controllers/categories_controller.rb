@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.all
+    @categories = Category.where(user_id: current_user.id)
   end
 
   # GET /categories/1 or /categories/1.json
@@ -13,6 +13,7 @@ class CategoriesController < ApplicationController
   # GET /categories/new
   def new
     @category = Category.new
+    @icons = icons
   end
 
   # GET /categories/1/edit
@@ -65,6 +66,11 @@ class CategoriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def category_params
-      params.require(:category).permit(:name, :icon)
+      params.require(:category).permit(:name, :icon, :user_id)
+    end
+
+    def icons
+      {'Shopping' => 'icon-1.png' , 'Education' => 'icon-2.jpg' , 'Transportation' => 'icon-3.png' , 'Food' => 'icon-4.jpeg' ,
+         'Entertainment' => 'icon-5.png' , 'Health' => 'icon-6.jpg' , 'Bills' => 'icon-7.png' , 'Other' => 'icon-8.jpg'}
     end
 end
