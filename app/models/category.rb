@@ -3,7 +3,7 @@ class Category < ApplicationRecord
   has_many :purchases, dependent: :destroy
 
   validates :name, presence: true
-  validates :icon , presence: true
+  validates :icon, presence: true
   def total_purchases
     purchases.size
   end
