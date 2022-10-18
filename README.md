@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Recipe_App
+# Budget_App
 
 > This project is created as part of the rails capstone at Microverse. This app is a  web application where a user manage its budget: have a list of transactions associated with a category, so that the user can see how much money it spent and on what.
 
