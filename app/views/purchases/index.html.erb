@@ -1,0 +1,17 @@
+<div class="container">
+<p style="color: green"><%= notice %></p>
+
+<h1 class="header">Purchases</h1>
+<%= link_to "New purchase", new_category_purchase_path  ,class: "btn btn-info"%>
+
+  <div id="purchases">
+        <%= render 'shared/purchase_table' do %>
+          <% @purchases.each do |purchase| %>
+            <%= render purchase %>
+          <% end %>
+        <% end %>
+      </div>
+
+      </div>
+
+

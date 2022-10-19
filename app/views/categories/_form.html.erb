@@ -1,0 +1,42 @@
+
+
+<div class="container">
+<%= form_with(model: category) do |form| %>
+  <% if category.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+        <% category.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div >
+    <%= form.text_field :name,  required: true,  class:"form-control", placeholder: "Name"%><br>
+  </div>
+
+<div >
+    <%= form.label :Icon, style: "display: block" %>
+    <%= form.select :icon, options_for_select([
+      ['Shopping' , @icons['Shopping']],
+      ['Food' , @icons['Food']],
+      ['Transport' , @icons['Transportation']],
+      ['Entertainment' , @icons['Entertainment']],
+      ['Health' , @icons['Health']],
+      ['Education' , @icons['Education']],
+      ['Bills' , @icons['Bills']],
+      ['Other' , @icons['Other']]
+    ]), {include_blank: 'Select Icon'} , required: true , class: "form-select" %>
+  </div>
+
+ <%= form.hidden_field :user_id, value: current_user.id %>
+
+  <button class= "btn btn-primary">
+    <%= form.submit "Add Category", class: "add-new"%>
+  </button>
+<% end %>
+</div>
