@@ -1,4 +1,4 @@
-/* stylelint-disable */
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -18,7 +18,8 @@
  /*
  *= require font-awesome
  */
-/* stylelint-disable */
+
+ /* stylelint-disable */
 .img {
   width: 50px;
   height: 50px;

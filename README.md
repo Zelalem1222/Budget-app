@@ -55,8 +55,7 @@ rspec spec
 > Rubocop --color
 > Rubocop -A
 ```
-## Authors
-
+## Author
 
 
 👤 **Zelalem Fissha**
@@ -64,6 +63,12 @@ rspec spec
 - GitHub: [@github](https://github.com/Zelalem1222)
 - Twitter: [@twitter](https://twitter.com/Zelalem52236790)
 - LinkedIn: [LinkedIn](https://twitter.com/Zelalem52236790)
+
+
+## Acknowledgments
+
+- Original design idea by Gregoire Vella on Behance
+
 
 
 ## 🤝 Contributing
