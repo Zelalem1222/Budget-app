@@ -41,6 +41,25 @@
 
 .add-new {
   border: none;
-  background-color: #0d6efd;
+  background-color: #5fb323;
   color: #fff;
 }
+
+.btn {
+  color: #fff;
+  background-color: #5fb323;
+  border: none;
+}
+
+.table {
+  margin: auto;
+  width: 60% !important; 
+}
+
+.header-contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20%;
+}
+

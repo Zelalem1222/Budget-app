@@ -1,28 +1,18 @@
 
 
-<div class="container-md row p-2 border border-secondary rounded shadow">
-<div class="col-1">
-     <%=image_tag "#{category.icon}" , class: "img" %>
-  </div>
-  <div class="col-4">
-    <h3>
-    <%= link_to category.name , category_purchases_path(category_id: category.id) , class: "nav-link text-black" %>
-    </h3>
-  </div>
-  <div class="col-2">
-    <h5>
-    <%= category.total_purchases %>
-    </h5>
-    </div>
-    <div class="col-2">
-    <h5>
-    $<%= category.total_purchases_amount %>
-    </h5>
-    </div>
-   <div class="col-1">
-   <%= button_to 'Remove',
+<table class="table">
+<tbody>
+<tr>
+<td ><%=image_tag "#{category.icon}" , class: "img" %></td>
+<td ><strong><%= link_to category.name , category_purchases_path(category_id: category.id) , class: "nav-link text-black" %><strong></td>
+<td><%= category.total_purchases %></td>
+<td> $<%= category.total_purchases_amount %></td>
+<td>
+
+ <%= button_to 'Remove',
       category_path(category),method: :delete,
-      class: "btn btn-danger" %> 
-      
-      </div>
-</div>
+      class: "btn btn-danger" %> </td>
+
+</tr>
+</tbody>
+</table>
