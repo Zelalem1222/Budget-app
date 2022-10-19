@@ -72,7 +72,7 @@ class CategoriesController < ApplicationController
 
   def icons
     { 'Shopping' => 'icon-1.png', 'Education' => 'icon-2.jpg', 'Transportation' => 'icon-3.png',
-      'Food' => 'icon-4.jpeg', 'Entertainment' => 'icon-5.png', 'Health' => 'icon-6.jpg',
+      'Food' => 'icon-4.jpg', 'Entertainment' => 'icon-5.png', 'Health' => 'icon-6.jpg',
       'Bills' => 'icon-7.png', 'Other' => 'icon-8.jpg' }
   end
 end
