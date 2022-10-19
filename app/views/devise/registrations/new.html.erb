@@ -1,4 +1,7 @@
-<h2>Sign up</h2>
+<%unless user_signed_in?%>
+<%= render 'shared/navbar'%>
+<%end%>
+<div class="container"><h2>Sign up</h2>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
   <div class="mb-3">
@@ -25,3 +28,4 @@
   </div>
 <% end %>
 <%= render "devise/shared/links" %>
+</div>

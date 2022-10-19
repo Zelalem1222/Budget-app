@@ -20,12 +20,7 @@
     </h5>
     </div>
    <div class="col-1">
-   <%= link_to 'Remove',
-      category_path(category), data: {
-                      turbo_method: :delete,
-                      turbo_confirm: "Are you sure?"
-                    },
-      class: "btn btn-danger" %> 
-      
+   <%= link_to 'Remove',category_path(category),method: :delete, class: "btn btn-danger" %> 
+  
       </div>
 </div>
