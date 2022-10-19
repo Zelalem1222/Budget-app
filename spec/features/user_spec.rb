@@ -8,15 +8,6 @@ RSpec.describe 'Users', type: :feature do
     it 'renders the sign up page' do
       expect(page).to have_content('Sign up')
     end
-
-    it 'should create a new user' do
-      fill_in 'user_name', with: 'Zelalem'
-      fill_in 'user_email', with: '123@gmail.com'
-      fill_in 'user_password', with: '123456'
-      fill_in 'user_password_confirmation', with: '123456'
-      click_button 'Sign up'
-      expect(page).to have_content('You need to sign in or sign up before continuing.')
-    end
   end
 
   describe '/users/sign_in' do

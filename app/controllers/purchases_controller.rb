@@ -1,5 +1,6 @@
 class PurchasesController < ApplicationController
   before_action :set_purchase, only: %i[show edit update destroy]
+  load_and_authorize_resource
 
   # GET /purchases or /purchases.json
   def index
@@ -19,13 +20,14 @@ class PurchasesController < ApplicationController
 
   # POST /purchases or /purchases.json
   def create
+    @category = Category.find(params[:category_id])
     @purchase = Purchase.new(purchase_params)
     @purchase.user_id = current_user.id
     @purchase.category_id = params[:category_id]
 
     respond_to do |format|
       if @purchase.save
-        format.html { redirect_to category_purchases_path(@purchase), notice: 'Purchase was successfully created.' }
+        format.html { redirect_to category_purchases_path(@category), notice: 'Purchase was successfully created.' }
         format.json { render :show, status: :created, location: @purchase }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -50,10 +52,11 @@ class PurchasesController < ApplicationController
   # DELETE /purchases/1 or /purchases/1.json
   def destroy
     @category = Category.find(params[:category_id])
+    @purchase = Purchase.find(params[:id])
     @purchase.destroy
 
     respond_to do |format|
-      format.html { redirect_to category_purchase_path(@category), notice: 'Purchase was successfully destroyed.' }
+      format.html { redirect_to category_purchases_path(@category), notice: 'Purchase was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
