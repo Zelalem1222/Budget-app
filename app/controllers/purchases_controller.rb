@@ -3,7 +3,7 @@ class PurchasesController < ApplicationController
 
   # GET /purchases or /purchases.json
   def index
-    @purchases = Purchase.where(user_id: current_user.id, category_id: params[:category_id])
+    @purchases = Purchase.where(user_id: current_user.id, category_id: params[:category_id]).order('created_at DESC')
   end
 
   # GET /purchases/1 or /purchases/1.json

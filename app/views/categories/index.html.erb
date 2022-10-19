@@ -1,6 +1,11 @@
+<% if user_signed_in? %>
+     <%= render partial: 'shared/header_categories' %>
+     <%end%>
+<div class="container">
 <p style="color: green"><%= notice %></p>
 
-<h1>Categories</h1>
+
+<h1 class="header">Categories</h1>
 
 <div id="categories">
   <% @categories.each do |category| %>
@@ -8,5 +13,5 @@
   <% end %>
 
 </div>
- <%= link_to "Add Category", new_category_path, class: "btn btn-light"%>
-
+ <%= link_to "Add Category", new_category_path, class: "btn btn-primary"%>
+</div>

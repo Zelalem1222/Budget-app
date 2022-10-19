@@ -1,7 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
+<% if @category.purchases.positive? %>
 <%= render @purchase %>
-
+<%end%>
 <div>
   <%= link_to "Edit this purchase", edit_category_purchase_path(@purchase) %> |
   <%= link_to "Back to purchases", category_purchases_path %>

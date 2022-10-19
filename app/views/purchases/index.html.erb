@@ -1,6 +1,7 @@
+<div class="container">
 <p style="color: green"><%= notice %></p>
 
-<h1>Purchases</h1>
+<h1 class="header">Purchases</h1>
 <%= link_to "New purchase", new_category_purchase_path  ,class: "btn btn-info"%>
 
   <div id="purchases">
@@ -9,6 +10,8 @@
             <%= render purchase %>
           <% end %>
         <% end %>
+      </div>
+
       </div>
 
 

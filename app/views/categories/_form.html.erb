@@ -1,6 +1,6 @@
 
 
-
+<div class="container">
 <%= form_with(model: category) do |form| %>
   <% if category.errors.any? %>
     <div style="color: red">
@@ -35,7 +35,8 @@
 
  <%= form.hidden_field :user_id, value: current_user.id %>
 
-  <div >
-    <%= form.submit "Add Category", class: "btn btn-primary"%>
-  </div>
+  <button class= "btn btn-primary">
+    <%= form.submit "Add Category", class: "add-new"%>
+  </button>
 <% end %>
+</div>
