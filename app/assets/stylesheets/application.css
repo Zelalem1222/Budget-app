@@ -63,8 +63,8 @@
   gap: 20%;
 }
 
-tr {
+.category-table {
   display: grid;
-  grid-template-columns: 15% 35% 10% 15% 25%;
+  grid-template-columns: 15% 30% 8% 17% 25%;
 }
 

@@ -2,7 +2,7 @@
 
 <table class="table">
 <tbody>
-<tr>
+<tr class="category-table">
 <td scope="col"><%=image_tag "#{category.icon}" , class: "img" %></td>
 <td scope="col"><strong><%= link_to category.name , category_purchases_path(category_id: category.id) , class: "nav-link text-black" %><strong></td>
 <td scope="col"><%= category.total_purchases %></td>
