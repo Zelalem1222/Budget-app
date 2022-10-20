@@ -1,6 +1,6 @@
 
 
-<div class="container">
+
 <%= form_with(model: category) do |form| %>
   <% if category.errors.any? %>
     <div style="color: red">
@@ -15,12 +15,11 @@
   <% end %>
 
 
-  <div >
+  <div class="form-outline mb-3">
     <%= form.text_field :name,  required: true,  class:"form-control", placeholder: "Name"%><br>
   </div>
 
-<div >
-    <%= form.label :Icon, style: "display: block" %>
+<div class="form-outline mb-3">
     <%= form.select :icon, options_for_select([
       ['Shopping' , @icons['Shopping']],
       ['Food' , @icons['Food']],
@@ -35,8 +34,8 @@
 
  <%= form.hidden_field :user_id, value: current_user.id %>
 
-  <button class= "btn btn-primary">
-    <%= form.submit "Add Category", class: "add-new"%>
-  </button>
+ 
+    <%= form.submit "Add Category", class: "btn btn-success"%>
+
 <% end %>
-</div>
+

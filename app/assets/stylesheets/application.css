@@ -63,3 +63,8 @@
   gap: 20%;
 }
 
+tr {
+  display: grid;
+  grid-template-columns: 15% 35% 10% 15% 25%;
+}
+

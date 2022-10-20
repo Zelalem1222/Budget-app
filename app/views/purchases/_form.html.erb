@@ -9,16 +9,16 @@
         </ul>
       </div>
     <% end %>
-  <div >
+  <div class="form-outline mb-3">
       <%= form.text_field :name, type: "text", placeholder: "name", class: "form-control" %><br />
       </div>
-      <div >
+      <div class="form-outline mb-3">
 
       <%= form.text_field :amount, type: "number", placeholder: "Amount", class: "form-control" %><br />
              </div>
-      <button class="btn btn-primary">
-      <%= form.submit "Add Purchase" , class: "add-new"%>
-      </button>
+    
+      <%= form.submit "Add Purchase" , class: "btn btn-success"%>
+    
        
    <% end %>
 
