@@ -1,6 +1,5 @@
 databases: 
   - name: postgres
-    database: postgres
       
 services:
   - type: web
