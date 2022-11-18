@@ -1,7 +1,0 @@
-# This file showing any options you can use the with nixpacks.toml File that you may need with nixpacks
-
-[phases.setup]
-nixPkgs = ["...", "imagemagick"] # Or add any you need to install with nix
-aptPkgs = ["...", "wget"]   # Installs the wget package with apt-get, could also pick any you want
-
-
