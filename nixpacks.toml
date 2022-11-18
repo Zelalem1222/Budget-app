@@ -12,5 +12,3 @@ aptPkgs = ["...", "wget"]   # Installs the wget package with apt-get, could also
 [phases.build]
 cmds = ['yarn run server:build']
 
-[start]
-cmd = 'yarn run server:start'
