@@ -8,9 +8,6 @@ aptPkgs = ["...", "wget"]   # Installs the wget package with apt-get, could also
 [start]
   cmd = "yarn run start"
 
-# Customize what is being built and how it starts up
-[phases.setup]
-nixPkgs = ['...', 'cowsay']
 
 [phases.build]
 cmds = ['yarn run server:build']
