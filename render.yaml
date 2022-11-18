@@ -1,6 +1,7 @@
 databases: 
   - name: postgres
-    ipAllowlist: [] 
+    database: budget_app_development
+    username: postgres
       
 services:
   - type: web
@@ -15,8 +16,4 @@ services:
         fromDatavase:
           name: postgres
           property: connectionString
-  - type: redis
-    name: redis
-    ipAllowlist: []
-    plan: free
-    maxMemory: noeviction                 
+              
