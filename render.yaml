@@ -1,0 +1,22 @@
+databases: 
+  - name: postgres
+    ipAllowlist: [] 
+      
+services:
+  - type: web
+    name: rails
+    env: ruby
+    buildCommand: "./bin/render-build.sh" 
+    startCommand: bundle exec rails s
+    envVars:
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: DATABASE_URL
+        fromDatavase:
+          name: postgres
+          property: connectionString
+  - type: redis
+    name: redis
+    ipAllowlist: []
+    plan: free
+    maxMemory: noeviction                 
