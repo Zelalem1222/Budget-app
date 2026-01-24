@@ -12,9 +12,7 @@
 - Libraries: `Cancancan`, `Devise`
 - Technologies: Git, Gitflow, Linters, Github, PostgreSql, Rspec, Capybara, Robocop
 
-## Live Demo
 
-[Live Demo Link](https://pacific-wave-62950.herokuapp.com/) 
 
 ## Sing_up and Login instructions
 - After you create you new account go back to the login button then you could be able to login
